@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Strike&display=swap');
+
+:root{
+    --title-font-size:32px;
+    --text-font-size:16px;
+    --bg-linear:linear-gradient(90deg,rgba(10, 10, 190, 0.888), rgba(167, 11, 151, 0.871), rgba(105, 9, 17, 0.834));
+    --text-font:"Oswald", sans-serif;
+    --title-font:"Protest Strike", sans-serif;
+    --nav-item-font-size:24px;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'sidebar main';
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 78px calc(100vh-78px);
+}
+
+.item{
+color: var(--text-color);
+font-size: var(--nav-item-font-size);
+font-family: var(--title-font);
+padding: 16px 32px;
+text-decoration: none;
+}
+
+.nav-item{
+--text-color:white;
+}
+
+.sidebar-item{
+    --text-color:black;
+}
+
+.nav-items{
+display: flex;
+align-items: center;
+gap:16px;
+}
+
+.page-header{
+background-image: var(--bg-linear);
+background-size: 300%;
+background-position: left;
+animation: bg-animation 5s infinite alternate;
+
+padding:0 64px;
+grid-area: header;
+
+}
+
+.page-sidebar{
+    grid-area: sidebar;
+}
+
+.sidebar-items{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-main{
+    gap: 32px;
+    grid-area: main;
+    border-left: 1px solid gray;
+
+}
+
+.post-item{
+    padding: 32px;
+    border: 1px solid grey;
+    border-radius: 16px;
+    height: 250px;
+    width:100px;
+}
+
+.posts-list{
+    margin:32px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
